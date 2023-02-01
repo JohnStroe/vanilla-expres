@@ -1,0 +1,11 @@
+{
+  "name": "vanilla-expres",
+  "version": "1.0.0",
+  "description": "First project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Ciprian",
+  "license": "ISC"
+}

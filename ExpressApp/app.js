@@ -14,7 +14,7 @@ app.get('/', (req, res) =>{
     const blogs = [
         {title:'Blog 1', snippet:'This is the first blog. I hope you like it.'},
         {title:'Blog 2', snippet:'This is the second blog. I hope you love it.'},
-        {title:'Blog 3', snippet:'This is the third blog. When will this end.'},
+        {title:'Blog 3', snippet:'This is the third blog. When will this end.'}
     ];
     // res.send('<p> Home Page </p>')
     // res.sendFile('./views/index.html', { root: __dirname});

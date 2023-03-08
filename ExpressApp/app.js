@@ -1,15 +1,29 @@
 const express = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+
+
 
 // set up express app
 const app = express();
+
+//connect to mongo db
+const dbURI = 'mongodb+srv://tutorial:G9DZJ9aby39E@vanilaapp.8k4tnue.mongodb.net/node-tuts?retryWrites=true&w=majority';
+mongoose.connect(dbURI)
+    .then((result) => app.listen(3000))
+    .catch((err) => console.log('oops'))
 
 // register view engine
 app.set('view engine', 'ejs');
 // app.set('views', 'folder name where views are kept');
 
 //listen for requests
-app.listen(3000);
+//app.listen(3000);
+
+// midleware && static
+
+app.use(express.static('public'));
+
 app.use(morgan('dev'));
 
 app.get('/', (req, res) =>{
